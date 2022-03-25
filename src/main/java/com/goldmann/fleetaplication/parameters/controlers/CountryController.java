@@ -24,7 +24,6 @@ public class CountryController {
         return "/parameters/countries";
     }
 
-
     //The Get Country By Id
     @GetMapping("/parameters/country/{id}")
     @ResponseBody
@@ -55,7 +54,7 @@ public class CountryController {
     @PostMapping("/countries")
     public String save(Country country){
         countryService.save(country);
-        return "redirect:/countries";
+        return "redirect:/parameters/countries";
     }
 
     @RequestMapping(value = "/countries/delete/{id}", method = {RequestMethod.GET,RequestMethod.DELETE})
@@ -67,7 +66,7 @@ public class CountryController {
     @RequestMapping(value = "/countries/update/{id}", method = {RequestMethod.GET,RequestMethod.PUT})
     public String update(Country country){
         countryService.save(country);
-        return "redirect:/countries";
+        return "redirect:/parameters/countries";
     }
 
 

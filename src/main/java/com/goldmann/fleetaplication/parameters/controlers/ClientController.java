@@ -34,7 +34,6 @@ public class ClientController {
 
     @GetMapping("/parameters/clients")
     public String findAll(Model model){
-
         addModelAttributes(model);
         return "/parameters/clients";
     }

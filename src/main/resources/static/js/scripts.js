@@ -114,3 +114,17 @@ $('document').ready(function () {
     })
 
 })
+
+$('document2').ready(function () {
+    $('.table #display').on('click', function (event) {
+        event.preventDefault();
+        var href = $(this).attr('href');
+        $.get(href, function (vehicleType, status) {
+            $('#txtId').val(vehicleType.id);
+            $('#txtDescription').val(vehicleType.description);
+            $('#txtDetails').val(vehicleType.details);
+        })
+    })
+})
+
+

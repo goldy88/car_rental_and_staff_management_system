@@ -17,8 +17,8 @@ public class ClientService {
         return clientRepository.findAll();
     }
 
-    public void save(Client contact){
-        clientRepository.save(contact);
+    public void save(Client client){
+        clientRepository.save(client);
     }
 
     public void delete(Integer id){
