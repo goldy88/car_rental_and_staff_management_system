@@ -19,6 +19,9 @@ public class FleetAplicationApplication {
 
         LOGGER.info("Starting app: "+ LOGGER.getName());
 
+
+
+
     }
 
 }
