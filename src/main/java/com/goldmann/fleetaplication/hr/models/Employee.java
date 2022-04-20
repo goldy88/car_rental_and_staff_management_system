@@ -9,7 +9,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import java.util.Date;
+import java.time.LocalDate;
+
 
 @Entity
 @Data
@@ -30,5 +31,5 @@ public class Employee extends Person {
 	private Integer jobtitleid;
 	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private Date hireDate;
+	private LocalDate hireDate;
 }

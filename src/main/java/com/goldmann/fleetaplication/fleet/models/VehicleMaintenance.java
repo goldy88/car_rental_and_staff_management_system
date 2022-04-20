@@ -9,8 +9,12 @@ import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.*;
 
+
+/**
+ * Třída pro model servisu vozidel.
+ */
 @Entity
 @Data
 @NoArgsConstructor
@@ -28,11 +32,11 @@ public class VehicleMaintenance{
     private Vehicle vehicle;
     private Integer vehicleid;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date startDate;
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    private LocalDateTime startDate;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date endDate;
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    private LocalDateTime endDate;
 
     private String price;
 

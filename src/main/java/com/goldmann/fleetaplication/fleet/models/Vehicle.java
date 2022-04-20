@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.*;
 
 @Entity
 @Data
@@ -33,11 +33,11 @@ public class Vehicle {
 
     private String vehicleNumber;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date registrationDate;
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    private LocalDate registrationDate;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date acquisitionDate;
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    private LocalDate acquisitionDate;
     private String description;
 
     @ManyToOne

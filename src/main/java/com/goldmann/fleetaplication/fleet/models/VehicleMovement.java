@@ -9,7 +9,8 @@ import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
+
 
 @Entity
 @Data
@@ -33,16 +34,16 @@ public class VehicleMovement {
     private Location location1;
     private int locationid1;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date date1;
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    private LocalDate date1;
 
     @ManyToOne
     @JoinColumn(name="locationid2", insertable=false, updatable=false)
     private Location location2;
     private int locationid2;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date date2;
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    private LocalDate date2;
 
     private String remarks;
 }

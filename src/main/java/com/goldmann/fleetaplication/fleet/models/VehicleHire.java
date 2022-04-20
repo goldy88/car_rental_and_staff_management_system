@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.*;
 
 @Entity
 @Data
@@ -26,13 +26,13 @@ public class VehicleHire {
     private Vehicle vehicle;
     private Integer vehicleid;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date dateOut;
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    private LocalDate dateOut;
 
     private String timeOut;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date dateIn;
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    private LocalDate dateIn;
 
     private String timeIn;
 

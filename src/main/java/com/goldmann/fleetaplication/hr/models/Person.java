@@ -9,7 +9,8 @@ import org.hibernate.annotations.Formula;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
+
 
 @Data
 @NoArgsConstructor
@@ -44,7 +45,7 @@ public class Person {
 	private Integer stateid;
 	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private Date dateOfBirth;
+	private LocalDate dateOfBirth;
 	private String city;
 	private String address;
 	private String phone;
