@@ -14,6 +14,7 @@ Backend:
 -Swagger UI
 -thymeleaf
 -JUnit 4
+-Maven
 
 
 Frontend:
